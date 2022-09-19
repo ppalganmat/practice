@@ -6,17 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
-    public float GameDuration;
+    public static float GameDuration = 100f;
     public GameObject timerGO;
     void Start()
     {
+        
         StartCoroutine(delayedHelloWorld());
     }
 
     // Update is called once per frame
     void Update()
     {
-        timerGO.gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = GameDuration + "";
+        //timerGO.gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = GameDuration + "";
+        Debug.Log(GameDuration + "");
     }
     private void FixedUpdate()
     {
